@@ -110,6 +110,8 @@ function applyFontSize() {
 
 function applyContrast() {
 
+   alert(window.innerWidth);
+    
     var r = document.querySelector(':root');
     var rs = getComputedStyle(r);
 
