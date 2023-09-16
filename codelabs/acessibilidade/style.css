@@ -1,0 +1,137 @@
+
+:root {
+    --defaultFontSize: 18px;
+    --defaultFontSizeLarge: 22px;
+
+    --acessibilityFontSize: 26px;
+    --acessibilityFontSizeLarge: 34px;
+
+    --fontSize: var(--defaultFontSize);
+    --fontSizeLarge: var(--defaultFontSizeLarge);
+
+    --defaultBackgroundPrimary: #FFD;
+    --defaultBackgroundSecondary: #eec;
+    --defaultBackgroundTertiary: #DDF;
+    
+    --defaultPrimary: #7AA;
+    --defaultSecondary: #358;
+    --defaultTertiary: #09A;
+
+    --darkBackgroundPrimary: #000;
+    --darkBackgroundSecondary: #222;
+    --darkBackgroundTertiary: #256;
+    
+    --darkPrimary: #FFF;
+    --darkSecondary: #CDF;
+    --darkTertiary: #5FF;
+
+    --lightBackgroundPrimary: #fff;
+    --lightBackgroundSecondary: #eee;
+    --lightBackgroundTertiary: #DEF;
+    
+    --lightPrimary: #000;
+    --lightSecondary: #002;
+    --lightTertiary: #004;
+
+    --backgroundPrimary: var(--defaultBackgroundPrimary);
+    --backgroundSecondary: var(--defaultBackgroundSecondary);
+    --backgroundTertiary: var(--defaultBackgroundTertiary);
+    
+    --primary: var(--defaultPrimary);
+    --secondary: var(--defaultSecondary);
+    --tertiary: var(--defaultTertiary);
+
+    --bgLetraAtalho: var(--backgroundSecondary);
+    --letraAtalhoDecoration: "none";
+}
+
+* {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: var(--fontSize);
+    background-color: var(--backgroundPrimary);
+    color: var(--primary);
+}
+
+main, header, footer {
+    padding: 20px;
+}
+
+h1, h2, h3, h4 {
+    color: var(--secondary);
+    font-size: var(--fontSizeLarge);
+}
+
+.secao_noticias article {
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+}
+
+@media screen and (max-width: 700px) {
+    .secao_noticias article {
+        background-color: #09A;
+        display: inline;
+    }
+}
+
+nav menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: var(--backgroundSecondary);
+}
+
+nav menu li {
+    float: left;
+}
+
+nav menu li a {
+    display: block;
+    background-color: var(--backgroundSecondary);
+    color: var(--primary);
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+.letra_atalho {
+    background-color: var(--bgLetraAtalho);
+    color: var(--primary);
+    text-decoration: var(--letraAtalhoDecoration);
+}
+
+nav menu li a:hover {
+    background-color: var(--backgroundTertiary);
+}
+
+nav menu li a:hover .letra_atalho {
+    background-color: var(--backgroundTertiary);
+}
+
+footer * a {
+    color: var(--tertiary);
+}
+
+
+
+.hidden_shortcuts {
+    position: absolute;
+    background-color: #034;
+    clip-path: inset(50%);
+    overflow: hidden;
+    white-space: nowrap; 
+}
+
+.hidden_shortcuts:hover, .hidden_shortcuts:focus {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    background-color: #034;
+    clip-path: inset(0%);
+    border: 2;
+    margin: 5px;
+    padding: 30px;
+    overflow: visible;
+}
+
